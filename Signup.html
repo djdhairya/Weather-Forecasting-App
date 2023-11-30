@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Sign up</title>
+		<link rel="stylesheet" href="./Signup.css">
+	</head>
+	<body>
+		<div class="register-box">
+			<h2>Register Now!</h2>
+			<form action="./Signup.php" method="post">
+				<div class="register-field">
+					<input type="text" name="name" required="" />
+					<label>Name</label>
+				</div>
+				<div class="register-field">
+					<input type="email" email=""  name="email" required="" />
+					<label>Email</label>
+				</div>
+                <div class="register-field">
+					<input type="mobile no." maxlength="10" mobileno="" required="" name="mobile" />
+					<label>Mobile number</label>
+				</div>
+				<div class="register-field">
+					<input type="password" id="password" name="password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=!]).{8,}$" required style="font-size: xx-small;" />
+					<label>Password</label>
+				</div>
+                <div class="register-field">
+					<input type="password" id="cnf_password" name="" required="" onkeyup="validate_password()">
+					<label>Confirm password</label>
+				</div>
+				<div class="register-field">
+					<p id="message"></p>
+				</div>
+				<button type="submit" id="submit" onclick="wrong_pass_alert()">Submit</button>
+			</form>
+		</div>
+		<script src="./Confirm_Password.js"></script>
+	</body>
+</html>
